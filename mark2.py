@@ -23,7 +23,7 @@ for i in filedata:
     X_train_filenames.append(i[0])
     y_train.append(int(i[1]))
 y_train = np.array(y_train)
-"""
+
 X = np.zeros((len(X_train_filenames),100,100,1))
 for i in range(len( X_train_filenames)):
     img = cv2.imread("./chest_xray/allimages/"+X_train_filenames[i],0)
@@ -31,9 +31,9 @@ for i in range(len( X_train_filenames)):
     X[i,:,:,:]=img
     print(i)
 np.save("train.npy",X)
-"""
-#batch_size = 250
-#IMG_SIZE=100
+
+
+
 X_train= np.load("train.npy")
 print(X_train.shape)
 #X_train = np.array(X_train).reshape(-1, IMG_SIZE, IMG_SIZE, 1)
